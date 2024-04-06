@@ -1,0 +1,25 @@
+---
+const { post } = Astro.props;
+---
+
+<div class="post-card">
+  <h2>{post.title}</h2>
+  <p>{post.body}</p>
+  <button>
+    <a href={`/post/${post.id}`}> Ver Detalles </a>
+  </button>
+</div>
+<style>
+  .post-card {
+    margin: 1em;
+    padding: 2em 1em 2em 1em;
+		border: 3px solid #486C6C; 
+    text-align: center;
+    background-color: #C5D9CE;
+    border-radius: 30px;
+	}
+
+  .post-card h2 {
+    color: #486C6C;
+  }
+</style>
